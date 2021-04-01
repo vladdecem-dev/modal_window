@@ -1,0 +1,144 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+ul, a, li 
+    text-decoration: none
+    list-style-type: none
+    display: block
+
+body, html 
+    height: 100%
+    font-family: 'Noto Sans JP', sans-serif
+    color: #111
+
+body 
+    display: flex
+    flex-direction: column
+    height: 100%
+
+.header
+    box-shadow: 0 0 7px rgba(0, 0, 0, .6)
+    flex: 0 0 auto
+    height: 75px
+    display: flex
+    align-items: center 
+    font-size: 1.6em
+    @media screen and ( max-width: 768px )
+        height: 50px
+        font-size: 1.3em
+
+.main 
+    flex: 1 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+
+.footer 
+    flex: 0 0 auto
+    height: 70px
+    box-shadow: 0 0 7px rgba(0, 0, 0, .6)
+    display: flex
+    align-items: center
+    @media screen and ( max-width: 1200px )
+        margin-top: 5%
+    @media screen and ( max-width: 768px )
+        height: 40px
+
+.container 
+    width: 80%
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+    @media screen and ( max-width: 768px )
+        width: 85%
+    @media screen and ( max-width: 576px )
+        width: 90%
+
+.btn 
+    width: 15%
+    height: 60px
+    background: #7B68EE
+    color: aliceblue
+    text-transform: uppercase
+    letter-spacing: 1.5px
+    border-radius: 3px
+    font-weight: bold
+    margin: 0 auto
+    margin-top: 20px
+    cursor: pointer    
+    animation: modal 1s ease-in-out
+    border-radius: 5px
+    @media screen and ( max-width: 1200px )
+        width: 250px
+        height: 45px
+    @media screen and ( max-width: 768px )
+        width: 30%
+    @media screen and ( max-width: 576px )
+        width: 60%
+
+.modal 
+    height: 300px
+    width: 700px
+    background: #F08080
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    border-radius: 5px
+    animation: modal 1s ease-in-out
+    display: none
+    position: relative
+    @media screen and ( max-width: 1200px )
+        width: 70%
+        height: 275px
+    @media screen and ( max-width: 992px )
+        width: 80%
+        height: 250px
+    @media screen and ( max-width: 768px )
+        width: 90%
+        height: 225px
+    @media screen and ( max-width: 576px )
+        height: 200px
+        width: 100%
+    &__title 
+        color: aliceblue
+        position: absolute
+        top: 45%
+        left: 50%
+        transform: translateX(-50%)
+        height: 200px
+        text-transform: uppercase
+        letter-spacing: 2px
+        font-weight: bold
+        font-size: 2em
+        @media screen and ( max-width: 992px )
+            font-size: 1.8em
+        @media screen and ( max-width: 768px )
+            font-size: 1.6em
+            letter-spacing: 1.6px
+        @media screen and ( max-width: 576px )
+            font-size: 1.1em
+            letter-spacing: 1px
+            text-align: center
+    &-close 
+        display: flex
+        justify-content: flex-end
+        margin-top: -3px
+        font-size: 1.5em
+        @media screen and ( max-width: 768px )
+            font-size: 1.2em            
+    &-times
+        cursor: pointer
+        color: aliceblue
+        @media screen and ( min-width: 1200px )
+            &:hover
+                color: #7B68EE
+
+@keyframes modal
+    0%
+        opacity: .1
+    100%
+        opacity: 1
+    
+
